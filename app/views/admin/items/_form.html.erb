@@ -1,0 +1,48 @@
+<div class = "container">
+
+  <div class = "row m-5">
+    <h2 class = "admin-items-new">商品新規投稿</h2>
+  </div>
+
+  <div class = "row">
+    <div class = "col-md-5 mx-auto">
+       form_with @item, local:true do |f|
+
+       <div class="field">
+        f.label : 商品画像
+        f.attachment_field :image
+      </div>
+
+      <div class="field">
+        f.label :商品名
+        f.text_field :name, placeholder:"商品名"
+      </div>
+
+      <div class="field">
+        f.label :商品説明
+        f.text_area :body, placeholder:"商品名"
+      </div>
+
+      <div class="field">
+        f.label :ジャンル
+        f.text_area :genre, rows:"5", placeholder:"ここに説明文を記述します"
+      </div>
+
+      <div class="field">
+        f.label :税抜価格
+        f.text_area :price, placeholder:"1000"
+        円
+      </div>
+
+      <div class="field">
+        f.label :販売ステータス
+        f.text_area :states
+      </div>
+
+      <div class="actions">
+        <%= f.submit "新規登録" %>
+      </div>
+      end
+    </div>
+  </div>
+</div>

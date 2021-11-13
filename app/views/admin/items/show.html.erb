@@ -1,0 +1,45 @@
+<div class = "container">
+
+  <div class = "row m-5">
+    <h2 class = "admin-items-show">商品一覧</h2>
+  </div>
+
+  <div class = "row">
+    <div class = "col-md-4">
+      attchment_image_tag @item, :image, :fill, 50, 50, fallback: "no-image-icon.jpg"
+    </div>
+
+    <div class = "col-md-8">
+      <table class = "table">
+        <tr>
+          <th>商品名</th>
+          <td>@item.name</td>
+        </tr>
+
+        <tr>
+          <th>商品説明</th>
+          <td>@item.body</td>
+        </tr>
+
+        <tr>
+          <th>ジャンル</th>
+          <td>@item.genre</td>
+        </tr>
+
+        <tr>
+          <th>
+            税込価格</br>(税抜価格)
+          </th>
+          <td>
+            @item.price</br> (@item.price*1.08)
+          </td>
+        </tr>
+
+        <tr>
+          <th>販売ステータス</th>
+          <td>@item.states</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

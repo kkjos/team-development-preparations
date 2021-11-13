@@ -1,0 +1,50 @@
+<div class = "container">
+
+  <div class = "row m-5">
+    <h2 class = "admin-users-edit">@user.nameさんの会員情報編集</h2>
+  </div>
+
+  <div class = "row">
+    <div class = "col">
+      form_with @user, local:true do |f|
+
+      f.id
+
+      <div class="field">
+        f.label : 氏名
+        f.text_field :last_name
+        f.text_field :first_name
+      </div>
+
+      <div class="field">
+        f.label : フリガナ
+        f.text_field :last_name_read
+        f.text_field :first_name_read
+      </div>
+
+      <div class="field">
+        f.label : 郵便番号
+        f.text_field :postal_code
+      </div>
+
+      <div class="field">
+        f.label : 住所
+        f.text_field :adress
+      </div>
+
+      <div class="field">
+        f.label :メールアドレス
+        f.text_field :email
+      </div>
+
+      <div class="field">
+        f.label :会員ステータス
+        f.text_field :user_states
+      </div>
+
+      <div class="actions">
+        <%= f.submit "変更を保存" %>
+      </div>
+
+    </div>
+  </div>
